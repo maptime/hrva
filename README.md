@@ -1,4 +1,4 @@
-[https://twitter.com/maptimehrva](@maptimehrva)
+[@maptimehrva](https://twitter.com/maptimehrva)
 ====
 
 Maptime Hamton Roads, Virginia (HRVA)
