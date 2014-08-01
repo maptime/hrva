@@ -1,13 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-
+<meta charset=utf-8 />
+<title>MAPTIME HRVA</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
+            <style>
+                body 
+                    { margin:0; padding:0; }
+                #map
+                    { position:absolute; top:0; bottom:0; width:100%; }
+            </style>
+</head>
 
 <body>
-HRVA TEST
-    
+    <div>
+    MAPTIME
+    </div>
+    <div id='map'></div>
+        <script>
+            L.mapbox.accessToken = 'pk.eyJ1Ijoiam9uYWhhZGtpbnMiLCJhIjoiRlVVVkx3VSJ9.9sdVEK_B_VkEXPjssU5MqA';
+                var map = L.mapbox.map('map', 'jonahadkins.j44d9e0k', { 
+                zoomControl: false,
+                retina: true
+                });
+                map.setView([37.033, -76.349], 10);
+        </script>
 </body>
 
 </html>
+
+
