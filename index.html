@@ -7,17 +7,88 @@
         <script src='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.js'></script>
         <link href='https://api.tiles.mapbox.com/mapbox.js/v2.0.0/mapbox.css' rel='stylesheet' />
             <style>
-                body 
-                    { margin:0; padding:0; }
-                #map
-                    { position:absolute; top:0; bottom:0; width:100%; }
+                body {
+  color: black;
+  line-height: 1.6;
+  font:normal 14px/25px 'Verdana', sans-serif;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100%; }
+
+.content {
+  background: rgba(255, 255, 255, 0.65);
+  padding: 1em;
+  max-width: 50em;
+  z-index: 100000; }
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
+
+h1 {
+  font-family: 'Verdana';
+  text-transform: uppercase;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  -webkit-transition: ease-in 0.25s;
+  -moz-transition: ease-in 0.25s;
+  transition: ease-in 0.25s; }
+  a:hover {
+    color: #f3ea20;
+    -webkit-transition: ease-in 0.25s;
+    -moz-transition: ease-in 0.25s;
+    transition: ease-in 0.25s; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  display: inline;
+  margin: 0 10px; }
+                    
+{ margin:0; padding:0; }
+#map
+    { position:absolute; top:0; bottom:0; width:100%; }
             </style>
 </head>
 
 <body>
-    <div>
-    MAPTIME
-    </div>
+    <div class='container'>
+            <div class='content'>
+
+                <h1><a target="blank" href="http://twitter.com/maptimehrva">Maptime HRVA</a></h1>
+
+                <p>Maptime HRVA is a monthly map learning experience in conjunction with the Code For America - <a target="blank" href="http://codeforhamptonroads.org/">Hampton Roads Brigade</a> Hack Night. It's a time for collaborative learning, exploration, and map creation using mapping tools and technologies.</p>
+                <p> Our last <a target="blank" href="http://www.meetup.com/Code-for-Hampton-Roads/events/194019102/">Meetup</a> (July) featured an <a target="blank" href="http://jonahadkins.github.io/intro-osm2/">Introduction to OpenStreetMap</a></p>
+                <p>Our next <a target="blank" href='http://www.meetup.com/Code-for-Hampton-Roads/events/198248312/'>Meetup</a> is August 20, 6PM - 9PM at <a target="blank" href='https://www.google.com/maps/place/111+Granby+St,+Norfolk,+VA+23510/@36.84687,-76.2922871,17z/data=!3m1!4b1!4m2!3m1!1s0x89ba980c9ae360e3:0x71da2c13df7f03ea?hl=en'>Hatch</a> in Downtown Norfolk, VA.</p>
+                <ul> 
+                    <li><a target="blank" href="http://twitter.com/maptimehrva">Chirp @maptimeHRVA</a></li>
+                    <li><a target="blank" href="https://github.com/maptime/hrva">Fork @GitHub</a></li>
+                    <li><a target="blank" href="http://codeforhamptonroads.org/">Hack @c4hrva</a></li>
+                    <li><a target="blank" href="http://www.maptime.io/">Gaze @Maptime! Worldwide</li>
+                </ul>
+
+            </div>
+        </div>
     <div id='map'></div>
         <script>
             L.mapbox.accessToken = 'pk.eyJ1Ijoiam9uYWhhZGtpbnMiLCJhIjoiRlVVVkx3VSJ9.9sdVEK_B_VkEXPjssU5MqA';
@@ -25,7 +96,7 @@
                 zoomControl: false,
                 retina: true
                 });
-                map.setView([37.033, -76.349], 10);
+                map.setView([37.072, -76.800], 10);
         </script>
 </body>
 
