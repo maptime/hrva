@@ -1,6 +1,6 @@
 Maptime Hamton Roads, Virginia (HRVA)
 ====
-Homepage: [maptimeHRVA homepage here](http://maptime.github.io/hrva/)  
+Homepage: [maptimeHRVA](http://maptime.github.io/hrva/)  
 Tweet: [@maptimehrva](https://twitter.com/maptimehrva)  
 Our Partners: [Code For Hampton Roads](http://codeforhamptonroads.org/)  
 Our Parents: [Maptime HQ](http://www.maptime.io/)  
