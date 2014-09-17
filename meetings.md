@@ -11,3 +11,9 @@ Inaugural Maptime Event!
   * Forkable web-application that fixes zoom levels for map services where all zoom levels have not been published. Example included allows for state image service to be used as a custom source in OSM iD editor.
 * [TileStream Demo](http://norfolkart-tiles.herokuapp.com/#!/map/iArt)
   * As part a Code For America - Hampton Roads Brigade project, [iArt Norfolk](http://iartnorfolk.com/#/map), custom map tiles were created using OSM data, tilemill, and were served to the leaflet api from an instance of [TileStream](https://github.com/mapbox/tilestream)
+
+#### 17 September 2014
+* [The Plot!](http://theplot.us) Cataloging community gardens, farmers markets, etc on a map. And how can we improve this concept. Currently using googlemaps with Wordpress.
+* Planning for OpenStreetMap edithon in November
+ * Looking at importing 90,000 buildings from the City of Norfolk
+* Brainstorming on subjects for future #maptime events
