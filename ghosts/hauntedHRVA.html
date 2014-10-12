@@ -24,8 +24,16 @@
 
   // load GeoJSON from an external file
   $.getJSON("hauntedhrva.geojson",function(data){
+    var ratIcon = L.icon({
+    iconUrl: 'boo.gif',
+    iconSize: [64,64]
+  });
     // add GeoJSON layer to the map once the file is loaded
-    L.geoJson(data).addTo(map);
+    L.geoJson(data,{
+    pointToLayer: function(feature,latlng){
+	  return L.marker(latlng,{icon: ratIcon});
+    }
+  }).addTo(map);
   });
 
   </script>
