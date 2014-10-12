@@ -52,7 +52,7 @@
      L.geoJson(data,{
     pointToLayer: function(feature,latlng){
       var marker = L.marker(latlng,{icon: ratIcon});
-      marker.bindPopup('<b>'+ feature.properties.Name +'</b>' + '<br/>' + feature.properties.Description);
+      marker.bindPopup('<b>'+ '<font size="16">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
       return marker;
     }
   }).addTo(map);
