@@ -48,12 +48,23 @@
       color: rgba(255, 255, 255, 0.1);
     }
     .custom-popup .leaflet-popup-tip-container {
-      width: 30px;
-      height: 15px;
+      margin: 0 auto;
+      width: 40px;
+      height: 20px;
+      position: relative;
+      overflow: hidden;
     }
     .custom-popup .leaflet-popup-tip {
-      background-color: rgba(255, 255, 255, 0.85) !important;
-}
+      width: 15px;
+      height: 15px;
+      padding: 1px;
+      margin: -8px auto 0;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
   </style>
   <div id="sidebar">
     <h1><b>Let's Map Some Ghosts!</b></h1>
@@ -74,25 +85,24 @@
         <br>Text Editor ~ Github Pages
         <hr>
         <bg>1st Things 1st I'm The Realest</bg>
-        <p>You'll need something to map! For this example, I googled some local <it>paranormal</it>
-           researchers:
-           <a href="http://www.freewebs.com/findghost/virginia.htm" target="_blank">Ghost Hunters of South Tidewater</a>,
-           <a href="http://virginiaghosthunters.webs.com/ourinvestigations.htm" target="_blank">Haunted Va. Paranormal Investigations</a>, and
-           <a href="http://harpsva.com/our-investigations.php" target="_blank">Hampton Roads Paranormal Society</a> - Using
-           <a href="http://geojson.io/" target="_blank">GeoJSON.io</a> we can create points on or near the locations mentioned.
-           GeoJSON.io provides a simple interface for adding attributes, such as Name, Description, and Website. The resulting
-           <a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/hauntedhrva.geojson" target="_blank">.geojson file</a>, located in our project repo,
-           contains about 25 <it>ghoulish</it> features spread across the region.
-        <hr>
-        <bg>Mapstack Part 2: The Return</bg>
-        <p>The second element of this project is the basemap. To keep it simple, we are going to use a service provider
-          rather than worry / <it>un-earth</it> our own server, etc. <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
-          by Stamen Design is an awesome project that will allow us to create some <it>spine-chilling-ly</it> free
-          map tiles using OpenStreetMap. The image filters and effects offer a wide variety of customization. When you're happy with
-          what you've came up with copy/paste the tile url of the image. It's rather long, but required for inserting into
-          our code. For this example our url is "http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png"
-        <hr>
-        <bg>GitHub P-P-Pages</bg>
+        <p>You'll need something to map! For this example, I googled some local
+          <it>paranormal</it>
+          researchers:
+          <a href="http://www.freewebs.com/findghost/virginia.htm" target="_blank">Ghost Hunters of South Tidewater</a>,
+          <a href="http://virginiaghosthunters.webs.com/ourinvestigations.htm" target="_blank">Haunted Va. Paranormal Investigations</a>, and
+          <a href="http://harpsva.com/our-investigations.php" target="_blank">Hampton Roads Paranormal Society</a> - Using
+          <a href="http://geojson.io/" target="_blank">GeoJSON.io</a> we can create points on or near the locations mentioned. GeoJSON.io provides a simple interface for adding attributes, such as Name, Description, and Website. The resulting
+          <a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/hauntedhrva.geojson" target="_blank">.geojson file</a>, located in our project repo, contains about 25
+          <it>ghoulish</it>features spread across the region.
+          <hr>
+          <bg>Mapstack Part 2: The Return</bg>
+          <p>The second element of this project is the basemap. To keep it simple, we are going to use a service provider rather than worry /
+            <it>un-earth</it>our own server, etc. <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
+            by Stamen Design is an awesome project that will allow us to create some
+            <it>spine-chilling-ly</it>free map tiles using OpenStreetMap. The image filters and effects offer a wide variety of customization. When you're happy with what you've came up with copy/paste the tile url of the image. It's rather long, but required
+            for inserting into our code. For this example our url is "http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png"
+            <hr>
+            <bg>GitHub P-P-Pages</bg>
 
   </div>
   <div class='custom-popup' id="map"></div>
