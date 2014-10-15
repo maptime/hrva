@@ -375,6 +375,21 @@
           36.86240322019088
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Jonah's Ghost",
+        "Website": "n/a",
+        "Description": "this dude is weird and dead"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.48578643798827,
+          37.0425724906182
+        ]
+      }
     }
   ]
 }
