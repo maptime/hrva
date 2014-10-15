@@ -9,38 +9,7 @@
   </style>
 </head>
 <body>
-<style>
-.custom-popup .leaflet-popup-content-wrapper {
-      background: rgba(70, 145, 158, 0.7);
-      color: #fff;
-      font-size: 12px;
-      line-height: 18px;
-    }
-    .custom-popup .leaflet-popup-content-wrapper a {
-      color: rgba(255, 255, 255, 0.1);
-    }
-    .custom-popup .leaflet-popup-tip-container {
-      margin: 0 auto;
-      width: 40px;
-      height: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    .custom-popup .leaflet-popup-tip {
-      width: 15px;
-      height: 15px;
-      padding: 1px;
-      margin: -8px auto 0;
-      -moz-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  </style>
-
   <div class='custom-popup' id="map"></div>
-
   <script>
 
   // initialize the map with our own location HRVA!
@@ -68,8 +37,6 @@
           var marker = L.marker(latlng, {
             icon: booIcon
           });
-          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
-          return marker;
         }
       }).addTo(map);
     });
