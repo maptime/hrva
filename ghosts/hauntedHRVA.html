@@ -69,13 +69,31 @@
   <div id="sidebar">
     <h1><b>Let's Map Some Ghosts!</b></h1>
     <hr>
-    <p>Mapping local paranormal activity is
+    A Maptime HRVA Leaflet How-To
+    <br><a href="https://twitter.com/maptimehrva" target="_blank">@maptimehrva</a>  &
+      <a href="https://twitter.com/jonahadkins" target="_blank">@jonahadkins</a>
+    <br>Mapping local paranormal activity is
       <it>dead</it> simple. Using open source components, the following instructions will guide you to
       <it>other side</it>  of web-mapping. This exercise assumes a
-      <it>spooky</it> knowledge of HTML and Javascript - but not at all required. Let the
+      <it>spooky</it> knowledge of HTML and Javascript - but not at all required. This will step through
+      each phase of what you see to the right. Just keep on scrolling down in this panel.
+      <br>Let the
       <it>seance</it> begin!
       <hr>
-      <p>
+      <bg>1st Things 1st I'm The Realest</bg>
+      <br>I learned how to do all this so I could show you! Don't send the <it>grim reaper</it> after me. Feel
+        free to fork ( or <it>knife</it> ) this repo to use or improve. Big shout outs to:
+        <br> <a href="https://twitter.com/awoodruff" target="_blank">Andy <it>"Werewolf"</it> Woodruff</a> for his
+          awesome <a href="http://awoodruff.github.io/leaflet-intro/" target="_blank">MaptimeBoston</a> how-to, which
+          I used to make this.
+          <br><a href="https://twitter.com/ungoldman" target="_blank"><it>"Gory"</it> Nate Goldman</a> for his
+          cool <a href="http://ngoldman.github.io/burger-week-challenge-2014/" target="_blank">burger map</a> which inspired
+          the UI for this how-to.
+          <br> Also, Maptime!
+            <br><a href="http://www.maptime.io/" target="_blank">
+              <img src="http://www.maptime.io/wp-content/uploads/2014/03/xmaptime-logo-web-header-rainbonly.png.pagespeed.ic.sUvy41gYSf.png" style="width:300px;height:150px">
+            </a>
+      <hr>
         <bg>Tech We'll Use</bg>
         <br><a href="http://leafletjs.com" target="_blank">Leaflet</a>
         ~ <a href="http://geojson.io/" target="_blank">GeoJSON.io</a>
@@ -84,8 +102,8 @@
         ~ <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
         <br>Text Editor ~ Github Pages
         <hr>
-        <bg>1st Things 1st I'm The Realest</bg>
-        <p>You'll need something to map! For this example, I googled some local
+        <bg>Data: The Beginning</bg>
+        <br>You'll need something to map! For this example, I googled some local
           <it>paranormal</it>
           researchers:
           <a href="http://www.freewebs.com/findghost/virginia.htm" target="_blank">Ghost Hunters of South Tidewater</a>,
@@ -95,57 +113,49 @@
           <a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/hauntedhrva.geojson" target="_blank">.geojson file</a>, located in our project repo, contains about 25
           <it>ghoulish</it> features spread across the region.
           <hr>
-          <bg>Mapstack Part 2: The Return</bg>
-          <p>The second element of this project is the basemap. To keep it simple, we are going to use a service provider rather than worry /
+          <bg>The MapStack Massacre</bg>
+          <br>The second element of this project is the basemap. To keep it simple, we are going to use a service provider rather than worry /
             <it>un-earth</it> our own server, etc. <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
             by Stamen Design is an awesome project that will allow us to create some
             <it>spine-chilling-ly</it> free map tiles using OpenStreetMap. The image filters and effects offer a wide variety of customization. When you're happy with what you've came up with copy/paste the tile url of the image. It's rather long, but required
             for inserting into our code. For this example our url is "http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png"
             <hr>
             <bg>GitHub P-P-Pages</bg>
-            <p>GitHub is great resource for code-sharing, development, and storage. An added bonus is the automatic page generator for any repository you create. We will use this for hosting our web-app and storing all of the necessary components. In the
+            <br>GitHub is great resource for code-sharing, development, and storage. An added bonus is the automatic page generator for any repository you create. We will use this for hosting our web-app and storing all of the necessary components. In the
               <it>afterlife</it> of your project there will a be total of 5 files in your repository that that run your app. Once you have enabled your github pages branch, you can delete everything except for the index.html file. It will keep all the code
               for your app, you can rename it if you like as well. Our <a href="https://github.com/maptime/hrva/tree/gh-pages/ghosts" target="_blank">sample repository</a> demonstrates the
               <it>grisly</it> set-up for this project.
               <hr>
-              <bg>Story So Far</bg>
-              <p>We have some points, a basemap and place to host our application. Let's add some more ingredients to the
-                <it>cauldron</it>
-                <hr>
-                <bg>Here's Leaflet</bg>
-                <p>Leaflet is the
-                  <it>hocus pocus</it> behind may of today's web-mapping applications. It provides an extensive library of functions
+                <bg>Hhhhhhhhere's Leaflet!</bg>
+                <br>Leaflet is the <it>hocus pocus</it> behind may of today's web-mapping applications. It provides an extensive library of functions
                   supported by a dedicated team of contributors. We are going to use the <a href="http://leafletjs.com" target="_blank">Leaflet.js</a> library
-                  to create our map.
-                  <hr>
-                  <bg>Initialize!</bg>
-                    <p>Using the <it>wicked</it>  documentation from the Leaflet.js website, we are going
+                  to create our map. Using the <it>wicked</it>  documentation from the Leaflet.js website, we are going
                       to start with the most basic components needed for a map. We are going to:
                       a) Add Leaflet starter code b) Specify the lat/long of our location c) Add our tile layer URL from MapStack
-                      <p><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part1.html" target="_blank">Code</a> / 
+                      <br><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part1.html" target="_blank">Code</a> /
                         <a href="http://maptime.github.io/hrva/ghosts/part1.html" target="_blank">Example</a>
                         <hr>
-                          <bg>Add Some Dots</bg>
-                            <p>We have a pretty <it>unnerving</it>  map so far. Let's add our .geojson file we made earlier.
+                          <bg>Data Part 2: The Return</bg>
+                            <br>We have a pretty <it>unnerving</it>  map so far. Let's add our .geojson file we made earlier.
                               An added step is using a <a href="http://code.jquery.com/jquery-2.1.1.min.js" target="_blank">jQuery</a> library
                               to handle the interaction of our data. We are going to: a) Reference jQuery in the html <head> b) Load our
                                 data c) add it to the map
-                              <p><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part2.html" target="_blank">Code</a> /
+                              <br><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part2.html" target="_blank">Code</a> /
                                 <a href="http://maptime.github.io/hrva/ghosts/part2.html" target="_blank">Example</a>
                                 <hr>
-                                  <bg>Make The Dots Like, Not Boring</bg>
-                                    <p>Dots are cool, but it's October and they need a cool <it>costume</it>  .
+                                  <bg>Attack of the Not Boring Dots</bg>
+                                    <br>Dots are cool, but it's October and they need a cool <it>costume</it>  .
                                       We can use almost any icon-size marker, and we've got
                                       <a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/boo.gif" target="_blank">one that floats</a> !
                                       Only one step here lets: a) add a new icon
-                                      <p><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part3.html" target="_blank">Code</a> /
+                                      <br><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part3.html" target="_blank">Code</a> /
                                         <a href="http://maptime.github.io/hrva/ghosts/leaflet/part3.html" target="_blank">Example</a>
                                         <hr>
                                           <bg>I Ain't Afraid Of No Ghosts</bg>
-                                            <p>So we have some pretty <it>frightening</it>  icons for our dots, but we really
+                                            <br>So we have some pretty <it>frightening</it>  icons for our dots, but we really
                                               want to tell the viewer what they are. Let's add some pop-ups from our data's
                                               attributes: a) create the pop-up b) format the text c) optionally style with css
-                                              <p><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part4.html" target="_blank">Code</a> /
+                                              <br><a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/part4.html" target="_blank">Code</a> /
                                                 <a href="http://maptime.github.io/hrva/ghosts/part4.html" target="_blank">Example</a>
 
   </div>
