@@ -1,167 +1,37 @@
 <html>
-
 <head>
-  <title>Haunted HRVA</title>
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <link rel="stylesheet" href="L.Control.Sidebar.css" />
+  <title>Some Page Title</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-  <script src="L.Control.Sidebar.js"></script>
+  //add jQuery
   <script src="jquery-2.1.1.min.js"></script>
   <style>
-    #map {
-      height: 100%
-    }
+    #map{ height: 100% }
   </style>
 </head>
-
 <body>
-  <style>
-    .leaflet-sidebar > .leaflet-control h1 {
-      font-size: 24pt;
-    }
-    .leaflet-sidebar > .leaflet-control bg {
-      font-size: 16pt;
-    }
-    .leaflet-sidebar > .leaflet-control it {
-      font-size: 12pt;
-      color: #252138;
-      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.4);
-    }
-    .leaflet-sidebar > .leaflet-control a {
-      color: #97DBB6;
-    }
-    .leaflet-sidebar > .leaflet-control hr {
-      display: block;
-      height: 1px;
-      border: 0;
-      border-top: 1px solid rgba(151, 219, 182, 0.4);
-      margin: 1em 0;
-      padding: 0;
-    }
-    .custom-popup .leaflet-popup-content-wrapper {
-      background: rgba(70, 145, 158, 0.7);
-      color: #fff;
-      font-size: 12px;
-      line-height: 18px;
-    }
-    .custom-popup .leaflet-popup-content-wrapper a {
-      color: rgba(255, 255, 255, 0.1);
-    }
-    .custom-popup .leaflet-popup-tip-container {
-      margin: 0 auto;
-      width: 40px;
-      height: 20px;
-      position: relative;
-      overflow: hidden;
-    }
-    .custom-popup .leaflet-popup-tip {
-      width: 15px;
-      height: 15px;
-      padding: 1px;
-      margin: -8px auto 0;
-      -moz-transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
-  </style>
-  <div id="sidebar">
-    <h1><b>Let's Map Some Ghosts!</b></h1>
-    <hr>
-    <p>Mapping local paranormal activity is
-      <it>dead</it>simple. Using open source components, the following instructions will guide you to
-      <it>other side</it>of web-mapping. This exercise assumes a
-      <it>spooky</it>knowledge of HTML and Javascript - but not at all required. Let the
-      <it>seance</it>begin!
-      <hr>
-      <p>
-        <bg>Tech We'll Use</bg>
-        <br><a href="http://leafletjs.com" target="_blank">Leaflet</a>
-        ~ <a href="http://geojson.io/" target="_blank">GeoJSON.io</a>
-        ~
-        <it>Demons</it>
-        ~ <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
-        <br>Text Editor ~ Github Pages
-        <hr>
-        <bg>1st Things 1st I'm The Realest</bg>
-        <p>You'll need something to map! For this example, I googled some local
-          <it>paranormal</it>
-          researchers:
-          <a href="http://www.freewebs.com/findghost/virginia.htm" target="_blank">Ghost Hunters of South Tidewater</a>,
-          <a href="http://virginiaghosthunters.webs.com/ourinvestigations.htm" target="_blank">Haunted Va. Paranormal Investigations</a>, and
-          <a href="http://harpsva.com/our-investigations.php" target="_blank">Hampton Roads Paranormal Society</a> - Using
-          <a href="http://geojson.io/" target="_blank">GeoJSON.io</a> we can create points on or near the locations mentioned. GeoJSON.io provides a simple interface for adding attributes, such as Name, Description, and Website. The resulting
-          <a href="https://github.com/maptime/hrva/blob/gh-pages/ghosts/hauntedhrva.geojson" target="_blank">.geojson file</a>, located in our project repo, contains about 25
-          <it>ghoulish</it>features spread across the region.
-          <hr>
-          <bg>Mapstack Part 2: The Return</bg>
-          <p>The second element of this project is the basemap. To keep it simple, we are going to use a service provider rather than worry /
-            <it>un-earth</it>our own server, etc. <a href="http://mapstack.stamen.com/" target="_blank">MapStack</a>
-            by Stamen Design is an awesome project that will allow us to create some
-            <it>spine-chilling-ly</it>free map tiles using OpenStreetMap. The image filters and effects offer a wide variety of customization. When you're happy with what you've came up with copy/paste the tile url of the image. It's rather long, but required
-            for inserting into our code. For this example our url is "http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png"
-            <hr>
-            <bg>GitHub P-P-Pages</bg>
-            <p>GitHub is great resource for code-sharing, development, and storage. An added bonus is the automatic page generator for any repository you create. We will use this for hosting our web-app and storing all of the necessary components. In the
-              <it>afterlife</it>of your project there will a be total of 5 files in your repository that that run your app. Once you have enabled your github pages branch, you can delete everything except for the index.html file. It will keep all the code
-              for your app, you can rename it if you like as well. Our <a href="https://github.com/maptime/hrva/tree/gh-pages/ghosts" target="_blank">sample repository</a> demonstrates the
-              <it>grisly</it>set-up for this project.
-              <hr>
-              <bg>Story So Far</bg>
-              <p>We have some points, a basemap and place to host our application. Let's add some more ingredients to the
-                <it>cauldron</it>
-                <hr>
-                <bg>Here's Leaflet</bg>
-                <p>Leaflet is the
-                  <it>hocus pocus</it>behind may of today's web-mapping applications. It provides an extensive library of functions
-                  supported by a dedicated team of contributors. We are going to use the <a href="http://leafletjs.com" target="_blank">Leaflet.js</a> library
-                  to create our map.
-                  <p>Part I - Initialize!
-                    <p>Using the <it>wicked</it> documentation from the Leaflet.js website, we are going
-                      to start with the most basic components needed for a map.
 
-  </div>
-  <div class='custom-popup' id="map"></div>
+  <div id="map"></div>
+
   <script>
-    // initialize the map
-    var map = L.map('map').setView([37.040, -76.386], 10);
-    L.tileLayer(
-      'http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
+
+  // initialize the map with our own location HRVA!
+  var map = L.map('map').setView([37.040, -76.386], 10);
+
+  // load tile layer from mapstack we copied earlier and use the required attribution
+  L.tileLayer('http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
         attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
-        maxZoom: 12,
-        minZoom: 10,
-      }).addTo(map);
+      // we want to limit the scrollability
+      maxZoom: 12,
+      minZoom: 10
+    }).addTo(map);
+    
+     // load the geojson file you saved in this directory
+  $.getJSON("hauntedhrva.geojson",function(data){
+    // add it to the map 
+    L.geoJson(data).addTo(map);
+  });
 
-    var sidebar = L.control.sidebar('sidebar', {
-      closeButton: false,
-      position: 'left'
-    });
-
-    map.addControl(sidebar);
-
-    setTimeout(function() {
-      sidebar.show();
-    }, 500);
-
-     // load GeoJSON from an external file
-    $.getJSON("hauntedhrva.geojson", function(data) {
-      var ratIcon = L.icon({
-        iconUrl: 'boo.gif',
-        iconSize: [28, 28]
-      });
-      // add GeoJSON layer to the map once the file is loaded
-      L.geoJson(data, {
-        pointToLayer: function(feature, latlng) {
-          var marker = L.marker(latlng, {
-            icon: ratIcon
-          });
-          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
-          return marker;
-        }
-      }).addTo(map);
-    });
   </script>
 </body>
-
 </html>
