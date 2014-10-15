@@ -1,0 +1,78 @@
+<html>
+<head>
+  <title>Some Page Title</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="jquery-2.1.1.min.js"></script>
+  <style>
+    #map{ height: 100% }
+  </style>
+</head>
+<body>
+<style>
+.custom-popup .leaflet-popup-content-wrapper {
+      background: rgba(70, 145, 158, 0.7);
+      color: #fff;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .custom-popup .leaflet-popup-content-wrapper a {
+      color: rgba(255, 255, 255, 0.1);
+    }
+    .custom-popup .leaflet-popup-tip-container {
+      margin: 0 auto;
+      width: 40px;
+      height: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .custom-popup .leaflet-popup-tip {
+      width: 15px;
+      height: 15px;
+      padding: 1px;
+      margin: -8px auto 0;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  </style>
+
+  <div class='custom-popup' id="map"></div>
+
+  <script>
+
+  // initialize the map with our own location HRVA!
+  var map = L.map('map').setView([37.040, -76.386], 10);
+
+  // load tile layer from mapstack we copied earlier and use the required attribution
+  L.tileLayer('http://{s}.sm.mapstack.stamen.com/($375a80[@60p],(naip,$2c235c[hsl-color@70])[darker],(toner-labels,$000[@20],$38315f[hsl-color])[@50])/{z}/{x}/{y}.png', {
+        attribution: 'Map tiles by <a href=”http://stamen.com”>Stamen Design</a>, under <a href=”http://creativecommons.org/licenses/by/3.0”>CC BY 3.0</a>. Data by <a href=”http://openstreetmap.org”>OpenStreetMap</a>, under <a href=”http://creativecommons.org/licenses/by-sa/3.0”>CC BY SA</a>',
+      // we want to limit the scrollability
+      maxZoom: 12,
+      minZoom: 10
+    }).addTo(map);
+    
+     // load the geojson file you saved in this directory
+  $.getJSON("hauntedhrva.geojson",function(data){
+    // use this to reference the icon in our repo 
+    var booIcon = L.icon({
+        iconUrl: 'boo.gif',
+        iconSize: [28, 28]
+    });
+    // add it to the map 
+      L.geoJson(data, {
+        pointToLayer: function(feature, latlng) {
+          // style it up 
+          var marker = L.marker(latlng, {
+            icon: booIcon
+          });
+          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
+          return marker;
+        }
+      }).addTo(map);
+    });
+    </script>
+</body>
+</html>
