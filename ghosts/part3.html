@@ -31,15 +31,12 @@
         iconSize: [28, 28]
     });
     // add it to the map 
-      L.geoJson(data, {
-        pointToLayer: function(feature, latlng) {
-          // style it up 
-          var marker = L.marker(latlng, {
-            icon: booIcon
-          });
-        }
-      }).addTo(map);
-    });
+   L.geoJson(data,{
+    pointToLayer: function(feature,latlng){
+	  return L.marker(latlng,{icon: booIcon});
+    }
+  }).addTo(map);
+});
     </script>
 </body>
 </html>
