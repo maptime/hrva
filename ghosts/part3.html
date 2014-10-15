@@ -32,11 +32,14 @@
         iconUrl: 'boo.gif',
         iconSize: [28, 28]
     // add it to the map 
-    L.geoJson(data, {
+      L.geoJson(data, {
         pointToLayer: function(feature, latlng) {
+          // style it up 
           var marker = L.marker(latlng, {
-            icon: booIcon
+            icon: ratIcon
           });
+          marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
+          return marker;
         }
       }).addTo(map);
     });
