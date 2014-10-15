@@ -56,16 +56,17 @@
     
      // load the geojson file you saved in this directory
   $.getJSON("hauntedhrva.geojson",function(data){
-    // use this to reference the icon in our repo (part 1)
-    var ratIcon = L.icon({
+    // use this to reference the icon in our repo 
+    var booIcon = L.icon({
         iconUrl: 'boo.gif',
         iconSize: [28, 28]
+    });
     // add it to the map 
       L.geoJson(data, {
         pointToLayer: function(feature, latlng) {
           // style it up 
           var marker = L.marker(latlng, {
-            icon: ratIcon
+            icon: booIcon
           });
           marker.bindPopup('<b>' + '<font size="3">' + feature.properties.Name + '</font>' + '</b>' + '<br/>' + feature.properties.Description);
           return marker;
