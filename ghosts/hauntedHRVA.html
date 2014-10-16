@@ -64,6 +64,7 @@
       -ms-transform: rotate(45deg);
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
+      background: rgba(70, 145, 158, 0.7);
     }
   </style>
   <div id="sidebar">
@@ -185,7 +186,8 @@
     $.getJSON("hauntedhrva.geojson", function(data) {
       var ratIcon = L.icon({
         iconUrl: 'boo.gif',
-        iconSize: [28, 28]
+        iconSize: [28, 28],
+        popupAnchor: [0, -18]
       });
       // add GeoJSON layer to the map once the file is loaded
       L.geoJson(data, {
