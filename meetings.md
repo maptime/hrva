@@ -16,4 +16,8 @@ Inaugural Maptime Event!
 * [The Plot!](http://theplot.us) Cataloging community gardens, farmers markets, etc on a map. And how can we improve this concept. Currently using googlemaps with Wordpress.
 * Planning for OpenStreetMap edithon in November
  * Looking at importing 90,000 buildings from the City of Norfolk
-* Brainstorming on subjects for future #maptime events
+* Brainstorming on subjects for future #maptime events  
+
+#### 15 October 2014  
+* Explored haunted sites in the regoin through a [Leaflet.js How-To](http://maptime.io/hrva/ghosts/hauntedHRVA.html)
+* Made a date for the fall OpenStreetMap mapathon - [Nov.15, RSVP Here](http://www.meetup.com/Code4HR/events/213694792/)
