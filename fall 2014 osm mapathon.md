@@ -15,4 +15,8 @@ Location:
     * Reservations ??
   * Hatch
     * Need Permisson From Zack
+  * 757 Maker Space
+    * Beau Turner
+  * 757 Create Space
+    * Clint and Sarah Dalton
   * Other Suggestions
