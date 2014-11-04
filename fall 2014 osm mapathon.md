@@ -11,6 +11,8 @@ Location:
     * Good Wi-Fi ??
     * Enough Table Space ??
     * Too Many 'Other' People ??
+    * Power Outlets ??
+    * Reservations ??
   * Hatch
     * Need Permisson From Zack
   * Other Suggestions
