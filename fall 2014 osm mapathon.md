@@ -6,4 +6,11 @@ The 2014 Fall Mapathon is teaming up with the Geography Awareness Week - a great
 ==========
 
 Attendees: Plan for up to 25  
-Place: Cafe Stella, Hatch, Other Suggestions?
+Location:
+  * Cafe Stella
+    * Good Wi-Fi ??
+    * Enough Table Space ??
+    * Too Many 'Other' People ??
+  * Hatch
+    * Need Permisson From Zack
+  * Other Suggestions
