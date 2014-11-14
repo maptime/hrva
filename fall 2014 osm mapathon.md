@@ -6,17 +6,5 @@ The 2014 Fall Mapathon is teaming up with the Geography Awareness Week - a great
 ==========
 
 Attendees: Plan for up to 25  
-Location:
-  * Cafe Stella
-    * Good Wi-Fi ??
-    * Enough Table Space ??
-    * Too Many 'Other' People ??
-    * Power Outlets ??
-    * Reservations ??
-  * Hatch
-    * Need Permisson From Zack
-  * 757 Maker Space
-    * Beau Turner
-  * 757 Create Space
-    * Clint and Sarah Dalton
-  * Other Suggestions
+Location: [757 Create Space](http://www.757creativespace.com/en) - Space to work/wi-fi/water donated by [Sarah Dalton](https://twitter.com/757CreativeSpac)
+ 
