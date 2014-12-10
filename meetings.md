@@ -21,3 +21,7 @@ Inaugural Maptime Event!
 #### 15 October 2014  
 * Explored haunted sites in the regoin through a [Leaflet.js How-To](http://maptime.io/hrva/ghosts/hauntedHRVA.html)
 * Made a date for the fall OpenStreetMap mapathon - [Nov.15, RSVP Here](http://www.meetup.com/Code4HR/events/213694792/)
+#### 15 November 2014  
+* Partcpated in fall OpenStreetMap mapathon - [#osmgeoweek](http://www.meetup.com/Code4HR/events/213694792/)
+#### 10 December 2014  
+* Eran of [Roadstead Montessori High School] (http://roadsteadhighschool.com/) discussng incorporating a civic mapping curriculum.
