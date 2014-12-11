@@ -27,3 +27,5 @@ Inaugural Maptime Event!
 
 #### 10 December 2014  
 * Eran of [Roadstead Montessori High School] (http://roadsteadhighschool.com/) discussng incorporating a civic mapping curriculum.
+* How to unite the local mapping communty????  
+* 
