@@ -28,4 +28,16 @@ Inaugural Maptime Event!
 #### 10 December 2014  
 * Eran of [Roadstead Montessori High School] (http://roadsteadhighschool.com/) discussng incorporating a civic mapping curriculum.
 * How to unite the local mapping communty????  
-* 
+
+#### 21 January 2015  
+* Mapping Non-Profit Organizations in OSM  
+
+#### 21 February 2015  
+* [Code Across 2015](http://www.eventbrite.com/e/code-across-hampton-roads-tickets-14767757761)  
+
+#### 25 March 2015  
+* Hosted by the [Daily Press](http://www.dailypress.com/)  
+* Intro To OSM  
+* Storytelling with Maps  
+
+
