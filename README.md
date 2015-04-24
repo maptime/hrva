@@ -1,4 +1,4 @@
-Maptime Hamton Roads, Virginia (HRVA)
+Maptime Hampton Roads, Virginia (HRVA)
 ====
 Homepage: [maptimeHRVA](http://maptime.github.io/hrva/)  
 Tweet: [@maptimehrva](https://twitter.com/maptimehrva)  
