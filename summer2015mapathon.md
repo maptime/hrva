@@ -1,4 +1,4 @@
-##Maptime HRVA Summer OSM Mapathon  
+#Maptime HRVA Summer OSM Mapathon  
 
 This weekend MaptimeHRVA , organized by [myself](https://twitter.com/jonahadkins) and [Alex Kappel](https://twitter.com/alex_kappel), held a summer OpenStreetMap Mapathon in Williamsburg, Va.   
 
@@ -15,10 +15,13 @@ Here’s our [quick stats](http://resultmaps.neis-one.org/) from the event:
 
 I don’t know about you but i’d say that’s a success.
 
-Pictures:
+##Pictures
 
-My daughter Sophie teaching a first time user the ropes.
+####My daughter Sophie teaching a first time user the ropes.
+![](https://raw.githubusercontent.com/maptime/hrva/master/pics/kid1.jpg)
 
-Sophie and myself
+####Sophie and Me
+![](https://raw.githubusercontent.com/maptime/hrva/master/pics/kid2.jpg)
 
-Changset areas from our edits.
+####Changset areas from our edits.
+![](https://raw.githubusercontent.com/maptime/hrva/master/pics/osm1.JPG)
