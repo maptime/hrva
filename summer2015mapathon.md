@@ -25,3 +25,9 @@ I don’t know about you but i’d say that’s a success.
 
 ####Changset areas from our edits.
 ![](https://raw.githubusercontent.com/maptime/hrva/master/pics/osm1.JPG)
+
+###Group picture (credit to Jameson Dungan)
+![]()
+
+###Venue (credit to Jameson Dungan)
+![]()
