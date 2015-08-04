@@ -27,7 +27,7 @@ I don’t know about you but i’d say that’s a success.
 ![](https://raw.githubusercontent.com/maptime/hrva/master/pics/osm1.JPG)
 
 ###Group picture (credit to Jameson Dungan)
-![]()
+![](https://raw.githubusercontent.com/maptime/hrva/master/pics/group_photo.jpg)
 
 ###Venue (credit to Jameson Dungan)
-![]()
+![](https://raw.githubusercontent.com/maptime/hrva/master/pics/itpir_house.jpg)
